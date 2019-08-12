@@ -1,4 +1,4 @@
-# graphics
+# Introduction
 A program to create sierpinski triangle.
 It use random number to create sierpinski triangle.
 
