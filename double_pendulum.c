@@ -49,7 +49,7 @@ int main(int argc, char* argv[])
 		sprintf(filename, "test%03d.ppm", i);
 		write_ppm(buffer, filename, WIDTH, HEIGHT);	
 	}
-
+	free(buffer);
 	return 0;
 }
 
