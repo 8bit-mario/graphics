@@ -1,3 +1,19 @@
+# Double Pendulum using cairo rendering engine
+The two double pendulum start at nearly identical position, one is slightly displace from other.
+RK4 integrator is use for solving double pendulum equation. Integration step size is 60fps or 0.167 second.
+
+# Dependency
+You will need cairo library
+
+# Compiling
+compile:
+gcc solver.c double_pend.cairo.c -lm -lcairo -o test
+
+and run ./test
+
+This will create 5000 frame of animation
+
+You can use ffmpeg command to create video
 # Double Pendulum
 Solving double pendulum.
 
