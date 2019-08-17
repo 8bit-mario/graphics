@@ -1,15 +1,10 @@
 #include<stdlib.h>
 #include<string.h>
 #include<stdio.h>
+#include<math.h>
 #include "graphics.h"
 
-typedef struct _Color
-{
-	unsigned char r;
-	unsigned char g;
-	unsigned char b;
-} Color;
-
+typedef struct _Color Color;
 unsigned char *_ns_buffer;
 int _ns_buffer_width;
 int _ns_buffer_height;
@@ -93,4 +88,52 @@ void write_ppm(unsigned char* buffer, const char* filename, int w, int h)
 	fprintf(fd, "P6 %d %d 255\n", w, h);
 	fwrite(buffer, w*h*3, 1, fd);
 	fclose(fd);
+}
+
+
+void hsv_to_rgb(float h, float s, float v, Color* rgb)
+{
+	float c = v*s;
+	float x = c * (1 - fabs(fmod(h/60.0f, 2.0)-1));
+	float m = v-c;
+	float r1, g1, b1;
+	if(h >= 0.0f && h < 60.0f)
+	{
+		r1 = c;
+		g1 = x;
+		b1 = 0.0f;
+	}
+	else if(h >= 60.0f && h < 120.0f)
+	{
+		r1 = x;
+		g1 = c;
+		b1 = 0.0f;
+	}
+	else if(h >= 120.0f && h < 180.0f)
+	{
+		r1 = 0.0f;
+		g1 = c;
+		b1 = x;
+	}
+	else if(h >= 180.0f && h < 240.0f)
+	{
+		r1 = 0.0f;
+		g1 = x;
+		b1 = c;
+	}
+	else if(h >= 240.0f && h < 300.0f)
+	{
+		r1 = x;
+		g1 = 0.0f;
+		b1 = c;
+	}
+	else
+	{
+		r1 = c;
+		g1 = 0.0f;
+		b1 = x;
+	}
+	rgb->r = r1*255;
+	rgb->g = g1*255;
+	rgb->b = b1*255;
 }
