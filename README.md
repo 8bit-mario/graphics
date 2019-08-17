@@ -1,5 +1,5 @@
 # Mandelbrot Set
-It's a set of complex number for which function f(z) = z^2 + c does not diverge when iterated from z = 0
+It's a set of complex number for which function f(z) = z^2 + c does not diverge when iterated from z = 0.
 Currently the color palette, with high iteration count produce unpleasing image. Histogram equalization and other
 smoothing technique will be implemented later. This program create an image of 800 x 600 pixel plot of mandelbrot, uses hsv_to_rgb converter and vary saturation according to iteration value.
 
