@@ -1,3 +1,17 @@
+# Interactive Double Pendulum
+Simulation of Double Pendulum. Features click and drag and some buttons.
+
+# Requirement
+Need Cairo Library
+
+Need SDL2 Library
+
+# Compiling
+gcc double_pend_app.c solver.c -lSDL2 -lcairo -lm -o pendulum
+
+and
+run with ./pendulum
+
 # Mandelbrot Set
 It's a set of complex number for which function f(z) = z^2 + c does not diverge when iterated from z = 0.
 Currently the color palette, with high iteration count produce unpleasing image. Histogram equalization and other
