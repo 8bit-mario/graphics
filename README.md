@@ -7,6 +7,14 @@ Need Cairo Library
 Need SDL2 Library
 
 # Compiling
+download this repository:
+
+git clone https://github.com/8bit-mario/graphics.git
+
+cd graphics
+
+compile with:
+
 gcc double_pend_app.c solver.c -lSDL2 -lcairo -lm -o pendulum
 
 and
