@@ -1,3 +1,13 @@
+# Koch Snowflake
+It's a beautiful fractal curve. It can be created from diving the triangle.
+More information at wikipedia: https://en.wikipedia.org/wiki/Koch_snowflake
+
+# Compiling
+gcc koch.c -o koch -lcairo -lm
+
+and run ./koch 
+This will create koch.ppm file open with supported image viewer
+
 # Interactive Double Pendulum
 Simulation of Double Pendulum. Features click and drag and some buttons.
 
