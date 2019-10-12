@@ -1,3 +1,12 @@
+# Perlin Noise
+Perlin noise was develop by Ken Perlin is a type of gradient noise. It is used in procedural texture generation also in may be modified form in Minecraft as procedural world generation.
+
+# Compiling
+g++ perlin.cpp graphics.c -o perlin
+
+and run ./perlin
+This should create perlin.ppm file. Open that file with any image viewer you like.
+
 # Koch Snowflake
 It's a beautiful fractal curve. It can be created from diving the triangle.
 More information at wikipedia: https://en.wikipedia.org/wiki/Koch_snowflake
