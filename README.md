@@ -1,3 +1,12 @@
+# Bezier Curve
+A Bezier curve is defined by set of control points. The curve passes through the first and third control points but not generally through second point.
+
+# Compoiling
+gcc bezier.c -o bezier -lcairo
+
+and run ./bezier
+beizer.png file is created. Open the file in image viewer.
+
 # Perlin Noise
 Perlin noise was develop by Ken Perlin is a type of gradient noise. It is used in procedural texture generation also in may be modified form in Minecraft as procedural world generation.
 
